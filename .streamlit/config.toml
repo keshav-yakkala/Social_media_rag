@@ -1,0 +1,11 @@
+[server]
+port = 7860 
+
+[global]
+gatherUsageStats = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showSidebarNavigation = false
