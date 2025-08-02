@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+# For ChromaDB (if you store its data locally)
+chroma_db/
