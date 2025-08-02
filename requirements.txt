@@ -4,4 +4,3 @@ sentence-transformers
 chromadb
 streamlit
 python-dotenv
-onnxruntime-cpu
