@@ -20,11 +20,9 @@ This project develops a Retrieval-Augmented Generation (RAG) system focused on s
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your_github_username/your_repo_name.git](https://github.com/your_github_username/your_repo_name.git)
-    cd your_repo_name
+    git clone [https://github.com/keshav-yakkala/Social_media_rag.git](https://github.com/keshav-yakkala/Social_media_rag.git)
+    cd Social_media_rag
     ```
-    (Replace `your_github_username` and `your_repo_name` with your actual GitHub details.)
-
 2.  **Create and Activate a Virtual Environment:**
     ```bash
     python -m venv venv
@@ -50,7 +48,7 @@ This project develops a Retrieval-Augmented Generation (RAG) system focused on s
     ```bash
     python main.py
     ```
-    * A `chroma_db/` folder will be created. Do not delete it.
+    * A `chroma_db/` folder will be created.
 
 6.  **Run the Streamlit Application:**
     ```bash
