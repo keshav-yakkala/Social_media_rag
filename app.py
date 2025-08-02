@@ -16,17 +16,22 @@ COLLECTION_NAME = "social_media_posts"
 TEXT_COLUMN = 'text' # Name of the text column in your CSV
 
 # --- Initialize ChromaDB and Embedding Model (only once) ---
+# --- Initialize ChromaDB and Embedding Model (only once) ---
 @st.cache_resource # Caches the model and client so it's not reloaded on every Streamlit rerun
 def initialize_rag_components():
-    print("Initializing RAG components (model, chromadb client, collection)...")
+    print("Initializing RAG components (model, chromadb client, collection)... STEP 1: Loading model.")
     # Load the Sentence Transformer model
     model = SentenceTransformer('all-MiniLM-L6-v2')
+    print("Initializing RAG components. STEP 2: Model loaded.")
 
     # Initialize ChromaDB client
+    print("Initializing RAG components. STEP 3: Initializing ChromaDB client.")
     client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
-    collection = client.get_or_create_collection(name=COLLECTION_NAME)
+    print("Initializing RAG components. STEP 4: ChromaDB client initialized.")
 
-    print(f"RAG components initialized. ChromaDB collection '{COLLECTION_NAME}' has {collection.count()} documents.")
+    print("Initializing RAG components. STEP 5: Getting/creating collection.")
+    collection = client.get_or_create_collection(name=COLLECTION_NAME)
+    print(f"RAG components initialized. STEP 6: ChromaDB collection '{COLLECTION_NAME}' ready with {collection.count()} documents.")
     return model, collection
 
 model, collection = initialize_rag_components()
